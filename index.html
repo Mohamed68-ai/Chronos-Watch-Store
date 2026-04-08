@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONOS | Concept Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">CHRONOS.</div>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#about">Maison</a></li>
+        </ul>
+        <div class="cart-icon" id="cartBtn">
+            Panier <span id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content reveal">
+            <h1>L'Élégance<br>Intemporelle.</h1>
+            <p>Découvrez notre nouvelle collection de garde-temps suisses, conçus pour l'éternité.</p>
+            <a href="#collection" class="btn">Découvrir la collection</a>
+        </div>
+    </header>
+
+    <section id="collection" class="collection-section">
+        <div class="reveal">
+            <h2>La Collection</h2>
+            
+            <div class="store-controls">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Rechercher un modèle...">
+                <div class="filters" id="filters">
+                    <button class="filter-btn active" data-filter="all">Tout</button>
+                    <button class="filter-btn" data-filter="Classique">Classique</button>
+                    <button class="filter-btn" data-filter="Sport">Sport</button>
+                    <button class="filter-btn" data-filter="Premium">Premium</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            </div>
+    </section>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button class="close-btn" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="total">Total : <span id="cartTotal">0</span> €</div>
+            <button class="btn btn-checkout" id="checkoutBtn">Finaliser la commande</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
